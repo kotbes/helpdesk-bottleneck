@@ -46,9 +46,9 @@ def validate_event_log(df: pd.DataFrame) -> dict:
     stats["duplicate_rows"] = duplicate_rows
 
     if duplicate_rows > 0:
-        warning.append(f"Найдено дубликатов событий: {duplicate_rows}")        
+        warning.append(f"Найдено дубликатов событий: {duplicate_rows}")
 
-        return {
+    return {
         "is_valid": len(errors) == 0,
         "errors": errors,
         "warnings": warning,
